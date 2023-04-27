@@ -189,11 +189,9 @@ function checkUserAndGenerateToken(data, req, res) {
 }
 
 /* Api to add Student */
-app.post("/add-product", (req, res) => {
-  console.log(req.body.name);
+app.post("/add-product", upload.none(), (req, res) => {
   try {
     if (
-      req.files &&
       req.body &&
       req.body.name &&
       req.body.desc &&
@@ -234,10 +232,9 @@ app.post("/add-product", (req, res) => {
 });
 
 /* Api to update Product */
-app.post("/update-product", upload.any(), (req, res) => {
+app.post("/update-product", upload.none(), (req, res) => {
   try {
     if (
-      req.files &&
       req.body &&
       req.body.name &&
       req.body.desc &&
