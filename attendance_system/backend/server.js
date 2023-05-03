@@ -11,13 +11,9 @@ mongoose.connect(
   "mongodb+srv://dipraman:Dd**16112002@cluster0.ycjsqi0.mongodb.net/test"
 );
 
-
 var fs = require("fs");
 var product = require("./model/product.js");
 var user = require("./model/user.js");
-
-
-
 
 var dir = "./uploads";
 var upload = multer({
@@ -334,7 +330,7 @@ app.get("/get-product", (req, res) => {
     query["$and"] = [];
     query["$and"].push({
       is_delete: false,
-      user_id: req.user.id,
+      // user_id: req.user.id,
     });
     if (req.query && req.query.search) {
       query["$and"].push({
