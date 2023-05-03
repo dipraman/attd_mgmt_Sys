@@ -38,8 +38,11 @@ export default class Login extends React.Component {
             pathname: "/Attendance",
             state: { username: this.state.username }, // pass the username to Attendance
           });
-        } else {
+        } else if(this.state.account_type === "teacher"){
           this.props.history.push("/Teacher");
+        }
+        else{
+          this.props.history.push("/Admin");
         }
       })
       .catch((err) => {
@@ -115,6 +118,10 @@ export default class Login extends React.Component {
           <Link href="/register">Register</Link>
           <br />
           <br />
+          <footer>
+          Created by: 
+          <p>Prathamesh Pawar</p> <p>Rahul Das</p> <p>Nidhish Shetty</p>
+          </footer>
         </div>
       </div>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import {
   Button,
   TextField,
@@ -20,7 +19,9 @@ import swal from "sweetalert";
 import contact from "./Attendance";
 const axios = require("axios");
 
-export default class Dashboard extends Component {
+
+
+export default class Teacher extends Component {
   constructor() {
     super();
     this.state = {
@@ -262,7 +263,8 @@ export default class Dashboard extends Component {
       <div>
         {this.state.loading && <LinearProgress size={40} />}
         <div>
-          <h2>HOD Dashboard</h2>
+            <h1>MIT-ADT "SAM System"</h1>
+          <h2>ADMIN Dashboard</h2>
           <Button
             className="button_style"
             variant="contained"
@@ -513,14 +515,7 @@ export default class Dashboard extends Component {
                     >
                       View Attendance
                   </Button> */}
-                    <Link
-                      to={{
-                        pathname: "/Attendance",
-                        state: { username: row.name },
-                      }}
-                    >
-                      View Attendance
-                    </Link>
+                    {/* <a href="./Attendance">View Attendance</a> */}
 
                     <Button
                       className="button_style"

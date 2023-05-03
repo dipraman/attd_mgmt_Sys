@@ -9,6 +9,7 @@ import Dashboard from "./Dashboard";
 import Teacher from "./Teacher";
 import "./Login.css";
 import Attendance from "./Attendance";
+import Admin from "./Admin";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route exact path="/register" component={Register} />
       <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/Teacher" component={Teacher} />
+      <Route exact path="/Admin" component={Admin} />
       
       <Route path="/Attendance" component={Attendance} />
       {/* <Route component={NotFound}/> */}

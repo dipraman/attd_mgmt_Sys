@@ -3,35 +3,35 @@ import React from "react";
 const studentAttendanceData = {
   student1: [
     {
-      subject_name: "PPS",
+      subject_name: "SUBJECT1",
       subject_code: 17,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 30,
     },
     {
-      subject_name: "OS",
+      subject_name: "SUBJECT2",
       subject_code: 21,
       gender: "Female",
       hours_conducted: 45,
       hours_attended: 35,
     },
     {
-      subject_name: "DBMS",
+      subject_name: "SUBJECT3",
       subject_code: 96,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 38,
     },
     {
-      subject_name: "CN",
+      subject_name: "SUBJECT4",
       subject_code: 25,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 45,
     },
     {
-      subject_name: "CIVIL",
+      subject_name: "SUBJECT5",
       subject_code: 71,
       gender: "Male",
       hours_conducted: 45,
@@ -40,35 +40,35 @@ const studentAttendanceData = {
   ],
   student2: [
     {
-      subject_name: "PPS",
+      subject_name: "SUBJECT1",
       subject_code: 17,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 35,
     },
     {
-      subject_name: "OS",
+      subject_name: "SUBJECT2",
       subject_code: 21,
       gender: "Female",
       hours_conducted: 45,
       hours_attended: 30,
     },
     {
-      subject_name: "DBMS",
+      subject_name: "SUBJECT3",
       subject_code: 96,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 42,
     },
     {
-      subject_name: "CN",
+      subject_name: "SUBJECT4",
       subject_code: 25,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 40,
     },
     {
-      subject_name: "CIVIL",
+      subject_name: "SUBJECT5",
       subject_code: 71,
       gender: "Male",
       hours_conducted: 45,
@@ -77,35 +77,35 @@ const studentAttendanceData = {
   ],
   student3: [
     {
-      subject_name: "PPS",
+      subject_name: "SUBJECT1",
       subject_code: 17,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 35,
     },
     {
-      subject_name: "OS",
+      subject_name: "SUBJECT2",
       subject_code: 21,
       gender: "Female",
       hours_conducted: 45,
       hours_attended: 30,
     },
     {
-      subject_name: "DBMS",
+      subject_name: "SUBJECT3",
       subject_code: 96,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 42,
     },
     {
-      subject_name: "CN",
+      subject_name: "SUBJECT4",
       subject_code: 25,
       gender: "Male",
       hours_conducted: 45,
       hours_attended: 40,
     },
     {
-      subject_name: "CIVIL",
+      subject_name: "SUBJECT5",
       subject_code: 71,
       gender: "Male",
       hours_conducted: 45,
@@ -114,13 +114,14 @@ const studentAttendanceData = {
   ],
   // add more students as needed
 };
-
+let x=1;
 const Contact = (props) => {
   const { username } = props.location.state; // get the username from the location state
   const attendanceData = studentAttendanceData[username];
   return (
     <div>
-      <h1>Attendance Details</h1>
+      <h1>MIT-ADT "SAM System"</h1>
+      <h2>Attendance Details for {username}</h2>
 
       <table>
         <tr>
@@ -144,8 +145,9 @@ const Contact = (props) => {
               <td>
                 {((val.hours_attended / val.hours_conducted) * 100).toFixed(0) <
                 75
-                  ? "YES"
+                  ? "YES" 
                   : "NO"}
+                 
               </td>
             </tr>
           );
