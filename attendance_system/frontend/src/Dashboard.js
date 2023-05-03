@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import {
   Button,
   TextField,
@@ -512,7 +513,14 @@ export default class Dashboard extends Component {
                     >
                       View Attendance
                   </Button> */}
-                    <a href="./Attendance">View Attendance</a>
+                    <Link
+                      to={{
+                        pathname: "/Attendance",
+                        state: { username: row.name },
+                      }}
+                    >
+                      View Attendance
+                    </Link>
 
                     <Button
                       className="button_style"

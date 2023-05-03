@@ -75,6 +75,43 @@ const studentAttendanceData = {
       hours_attended: 37,
     },
   ],
+  student3: [
+    {
+      subject_name: "PPS",
+      subject_code: 17,
+      gender: "Male",
+      hours_conducted: 45,
+      hours_attended: 35,
+    },
+    {
+      subject_name: "OS",
+      subject_code: 21,
+      gender: "Female",
+      hours_conducted: 45,
+      hours_attended: 30,
+    },
+    {
+      subject_name: "DBMS",
+      subject_code: 96,
+      gender: "Male",
+      hours_conducted: 45,
+      hours_attended: 42,
+    },
+    {
+      subject_name: "CN",
+      subject_code: 25,
+      gender: "Male",
+      hours_conducted: 45,
+      hours_attended: 40,
+    },
+    {
+      subject_name: "CIVIL",
+      subject_code: 71,
+      gender: "Male",
+      hours_conducted: 45,
+      hours_attended: 37,
+    },
+  ],
   // add more students as needed
 };
 
@@ -104,7 +141,12 @@ const Contact = (props) => {
               <td>
                 {((val.hours_attended / val.hours_conducted) * 100).toFixed(0)}
               </td>
-              <td>{"YES"}</td>
+              <td>
+                {((val.hours_attended / val.hours_conducted) * 100).toFixed(0) <
+                75
+                  ? "YES"
+                  : "NO"}
+              </td>
             </tr>
           );
         })}
