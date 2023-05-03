@@ -19,7 +19,9 @@ import swal from "sweetalert";
 import contact from "./Attendance";
 const axios = require("axios");
 
-export default class Dashboard extends Component {
+
+
+export default class Teacher extends Component {
   constructor() {
     super();
     this.state = {
@@ -261,7 +263,7 @@ export default class Dashboard extends Component {
       <div>
         {this.state.loading && <LinearProgress size={40} />}
         <div>
-          <h2>Student Dashboard</h2>
+          <h2>Teacher Dashboard</h2>
           <Button
             className="button_style"
             variant="contained"

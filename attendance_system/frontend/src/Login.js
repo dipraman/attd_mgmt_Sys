@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import swal from 'sweetalert';
 import { Button, TextField, Link } from '@material-ui/core';
+import Attendance from "./Attendance";
 const axios = require('axios');
 const bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
@@ -33,7 +34,10 @@ export default class Login extends React.Component {
       if(this.state.account_type==='hod')
       this.props.history.push('/dashboard');
       else if(this.state.account_type==='student'){
-        this.props.history.push('/dashboard');
+        this.props.history.push('/Attendance');
+      }
+      else{
+        this.props.history.push('./Teacher');
       }
     }).catch((err) => {
       if (err.response && err.response.data && err.response.data.errorMessage) {
@@ -92,7 +96,7 @@ export default class Login extends React.Component {
             variant="contained"
             color="primary"
             size="small"
-            disabled={this.state.username == '' && this.state.password == ''}
+            disabled={this.state.username === '' && this.state.password === ''}
             onClick={this.login}
           >
             Login

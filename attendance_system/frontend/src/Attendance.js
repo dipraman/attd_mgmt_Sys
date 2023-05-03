@@ -8,33 +8,42 @@ const data = [
     { subject_name: "CIVIL", subject_code: 71, gender: "Male",hours_conducted: 45,hours_attended: 40},
   ]
 
+ 
+  
+
 const Contact = () => {
   return (
-    <div> <h1>Attendance Details</h1>
+    <div> 
+      <h1>Attendance Details</h1>
+
+      {/* if(uname==="student1")
+      { */}
         <table>
         <tr>
           <th>Subject</th>
-          <th>Subject Code</th>
           <th>Hours Conducted</th>
           <th>Hours Attended</th>
           <th>Hours Missed</th>
           <th>Percentage</th>
+          <th>Deafulter</th>
 
         </tr>
         {data.map((val, key) => {
           return (
             <tr key={key}>
               <td>{val.subject_name}</td>
-              <td>{val.subject_code}</td>
               <td>{val.hours_conducted}</td>
               <td>{val.hours_attended}</td>
               <td>{val.hours_conducted-val.hours_attended}</td>
               <td>{((val.hours_attended/val.hours_conducted)*100).toFixed(0)}</td>
+              
+              <td>{"YES"}</td>
 
             </tr>
           )
         })}
       </table>
+      
     </div>
   )
 }

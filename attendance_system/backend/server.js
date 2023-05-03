@@ -10,9 +10,14 @@ var mongoose = require("mongoose");
 mongoose.connect(
   "mongodb+srv://dipraman:Dd**16112002@cluster0.ycjsqi0.mongodb.net/test"
 );
+
+
 var fs = require("fs");
 var product = require("./model/product.js");
 var user = require("./model/user.js");
+
+
+
 
 var dir = "./uploads";
 var upload = multer({
