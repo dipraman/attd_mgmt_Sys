@@ -175,14 +175,14 @@ const studentAttendanceData = {
       subject_code: 25,
       gender: "Male",
       hours_conducted: 45,
-      hours_attended: 37,
+      hours_attended: 40,
     },
     {
       subject_name: "SUBJECT5",
       subject_code: 71,
       gender: "Male",
       hours_conducted: 45,
-      hours_attended: 39,
+      hours_attended: 3,
     },
   ],
   // add more students as needed

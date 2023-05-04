@@ -526,9 +526,18 @@ export default class Dashboard extends Component {
                       variant="outlined"
                       color="secondary"
                       size="small"
-                      onClick={(e) => this.deleteProduct(row._id)}
+                     
                     >
-                      Delete
+                      Mark Present
+                    </Button>
+                    <Button
+                      className="button_style"
+                      variant="outlined"
+                      color="secondary"
+                      size="small"
+                    
+                    >
+                      Mark Absent
                     </Button>
                   </TableCell>
                 </TableRow>

@@ -65,11 +65,12 @@ export default class Login extends React.Component {
       <div style={{ marginTop: "200px" }}>
         <div>
           <h2>Login</h2>
+          
+        </div>
+        <div id="logo">
+          <img src={require('./mitlogo.jpg')} />
+          </div>
         
-        </div>
-        <div id="logo"> 
-	        <img src="http://via.placeholder.com/150x150"/> 
-        </div>
 
         <div>
           <TextField
