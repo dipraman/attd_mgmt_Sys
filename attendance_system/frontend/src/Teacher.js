@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import {
   Button,
   TextField,
@@ -19,9 +20,7 @@ import swal from "sweetalert";
 import contact from "./Attendance";
 const axios = require("axios");
 
-
-
-export default class Teacher extends Component {
+export default class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
@@ -333,7 +332,7 @@ export default class Teacher extends Component {
               name="discount"
               value={this.state.discount}
               onChange={this.onChange}
-              placeholder="Section"
+              placeholder="Year"
               required
             />
             <br />
@@ -422,7 +421,7 @@ export default class Teacher extends Component {
               name="discount"
               value={this.state.discount}
               onChange={this.onChange}
-              placeholder="Section"
+              placeholder="Year"
               required
             />
             <br />
@@ -490,7 +489,7 @@ export default class Teacher extends Component {
 
                 <TableCell align="center">Registration Number</TableCell>
                 <TableCell align="center">Branch</TableCell>
-                <TableCell align="center">Section</TableCell>
+                <TableCell align="center">Year</TableCell>
                 <TableCell align="center">Action</TableCell>
               </TableRow>
             </TableHead>
@@ -514,7 +513,14 @@ export default class Teacher extends Component {
                     >
                       View Attendance
                   </Button> */}
-                    <a href="./Attendance">View Attendance</a>
+                    <Link
+                      to={{
+                        pathname: "/Attendance",
+                        state: { username: row.name },
+                      }}
+                    >
+                      View Attendance
+                    </Link>
 
                     <Button
                       className="button_style"
